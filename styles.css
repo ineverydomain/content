@@ -1,0 +1,282 @@
+:root {
+  --bg: #090909;
+  --card: #141414;
+  --muted: #111;
+  --text: #f7f7f7;
+  --subtext: #bdbdbd;
+  --accent: #ff6a00;
+  --accent-soft: #ff8e3c;
+  --ring: rgba(255, 106, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 70% -10%, rgba(255, 106, 0, 0.25), transparent 35%),
+    radial-gradient(circle at 85% 5%, rgba(255, 106, 0, 0.18), transparent 22%),
+    linear-gradient(180deg, #060606, #0d0d0d 35%, #090909);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(7, 7, 7, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+  gap: 1rem;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  font-size: 1.15rem;
+}
+
+.logo span {
+  color: var(--accent-soft);
+}
+
+nav {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 0.93rem;
+  color: #e4e4e4;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+  color: #fff;
+  padding: 0.8rem 1.3rem;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 0 0 1px rgba(255, 126, 31, 0.35), 0 14px 34px -20px var(--ring);
+}
+
+.btn-small {
+  padding: 0.55rem 1rem;
+  font-size: 0.92rem;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+}
+
+.hero {
+  padding: 5rem 0 4rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.eyebrow,
+.section-label {
+  color: var(--accent-soft);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  margin: 0.5rem 0 1rem;
+  line-height: 1.12;
+  max-width: 14ch;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.7vw, 2.2rem);
+  margin: 0.2rem 0 1rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.hero-copy,
+p {
+  color: var(--subtext);
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  background: linear-gradient(155deg, rgba(255, 105, 0, 0.16), rgba(255, 105, 0, 0.03));
+  border: 1px solid rgba(255, 146, 64, 0.33);
+  border-radius: 18px;
+  padding: 1.5rem;
+}
+
+.hero-card ul {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.hero-card li {
+  color: #f1f1f1;
+  font-size: 0.95rem;
+}
+
+.hero-card span {
+  color: var(--accent-soft);
+  font-weight: 700;
+  margin-right: 0.35rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.muted {
+  background: rgba(255, 255, 255, 0.015);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.steps {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.steps article,
+.startup-grid article {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  background: rgba(255, 106, 0, 0.16);
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.chips span {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.92rem;
+  color: #ececec;
+}
+
+.investors {
+  background: radial-gradient(circle at 100% 20%, rgba(255, 106, 0, 0.18), transparent 37%);
+}
+
+.investor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.investor-grid div {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  text-align: center;
+}
+
+.startup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.meta {
+  color: var(--accent-soft);
+  font-size: 0.88rem;
+  margin-top: 0.55rem;
+}
+
+.cta-box {
+  text-align: center;
+  background: linear-gradient(145deg, rgba(255, 106, 0, 0.2), rgba(255, 106, 0, 0.03));
+  border: 1px solid rgba(255, 151, 75, 0.33);
+  border-radius: 20px;
+  padding: 2.5rem 1rem;
+}
+
+.cta .hero-actions {
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  nav,
+  .btn-small {
+    display: none;
+  }
+
+  .hero-grid,
+  .split,
+  .steps,
+  .startup-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 3.5rem;
+  }
+}
